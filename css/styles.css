@@ -84,6 +84,10 @@
    font-weight: 400;
  }
 
+   a {
+     text-decoration: none;
+   }
+
  /* set up the body */
  body {
    font-family: var(--ff-sans-1);
@@ -378,10 +382,22 @@
    display: inline-block;
  }
 
- /* pricing */
- #pricing {
-   padding: 7% 5%;
- }
+ /* behance */
+.card-img-overlay {
+    padding: 12% 15%;
+}
+
+.behance-container {
+  padding: 7% 15%;
+}
+
+  .card-img {
+    background-color: hsl( var(--clr-dark);)
+  }
+
+  .opacity-effect {
+    opacity: .25!important;
+  }
 
  .btn-primary {
    background-color: hsl(var(--clr-prime));
