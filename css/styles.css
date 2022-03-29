@@ -1,0 +1,419 @@
+ /* ------------------- */
+ /* Custom properties   */
+ /* ------------------- */
+ :root {
+   /* colors */
+   --clr-dark: 230 35% 7%;
+   --clr-white: 0 0% 100%;
+   --clr-prime: 333 93% 56%;
+   --clr-second: 192 85% 62%;
+   /* font-sizes */
+   --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
+   --fs-800: 3.5rem;
+   --fs-700: 1.5rem;
+   --fs-600: 1rem;
+   --fs-500: 1rem;
+   --fs-400: 0.9375rem;
+   --fs-300: 1rem;
+   --fs-200: 0.875rem;
+   /* font-families */
+   --ff-sans-1: "Roboto", sans-serif;
+   --ff-sans-2: "Ubuntu", sans-serif;
+ }
+
+ @media (min-width: 35em) {
+   :root {
+     --fs-800: 5rem;
+     --fs-700: 2.5rem;
+     --fs-600: 1.5rem;
+     --fs-500: 1.25rem;
+     --fs-400: 1rem;
+   }
+ }
+
+ @media (min-width: 45em) {
+   :root {
+     /* font-sizes */
+     --fs-800: 6.25rem;
+     --fs-700: 3.5rem;
+     --fs-600: 2rem;
+     --fs-500: 1.75rem;
+     --fs-400: 1.125rem;
+   }
+ }
+
+ /* ------------------- */
+ /* Reset               */
+ /* ------------------- */
+ /* https://piccalil.li/blog/a-modern-css-reset/ */
+ /* Box sizing */
+ *,
+ *::before,
+ *::after {
+   box-sizing: border-box;
+ }
+
+ /* Reset margins */
+ body,
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ p,
+ figure,
+ picture {
+   margin: 0;
+ }
+
+ hr {
+   border-bottom: 1px #fff solid;
+ }
+
+ h2 {
+   line-height: 4rem;
+ }
+
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6,
+ p {
+   font-weight: 400;
+ }
+
+ /* set up the body */
+ body {
+   font-family: var(--ff-sans-1);
+   font-size: var(--fs-400);
+ }
+
+ /* make images easier to work with */
+ img,
+ picture {
+   max-width: 100%;
+   display: block;
+ }
+
+ /* make form elements easier to work with */
+ input,
+ button,
+ textarea,
+ select {
+   font: inherit;
+ }
+
+ /* remove animations for people who've turned them off */
+ @media (prefers-reduced-motion: reduce) {
+
+   *,
+   *::before,
+   *::after {
+     animation-duration: 0.01ms !important;
+     animation-iteration-count: 1 !important;
+     transition-duration: 0.01ms !important;
+     scroll-behavior: auto !important;
+   }
+ }
+
+ /* ------------------- */
+ /* Utility classes     */
+ /* ------------------- */
+ /* general */
+ .pad-1 {
+   padding: 0 15%;
+ }
+
+ /* colors */
+ .bg-dark {
+   background-color: hsl(var(--clr-dark));
+ }
+
+ .bg-white {
+   background-color: hsl(var(--clr-white));
+ }
+
+ .bg-prime {
+   background-color: hsl(var(--clr-prime));
+ }
+
+ .bg-second {
+   background-color: hsl(var(--clr-second));
+ }
+
+ .text-dark {
+   color: hsl(var(--clr-dark));
+ }
+
+ .text-accent {
+   color: hsl(var(--clr-light));
+ }
+
+ .text-white {
+   color: hsl(var(--clr-white));
+ }
+
+ .text-prime {
+   color: hsl(var(--clr-prime));
+ }
+
+ .text-second {
+   color: hsl(var(--clr-second));
+ }
+
+ .border-prime {
+   border-color: hsl(var(--clr-prime));
+ }
+
+ /* typography */
+ .ff-sans-1 {
+   font-family: var(--ff-sans-1);
+ }
+
+ .ff-sans-2 {
+   font-family: var(--ff-sans-2);
+ }
+
+ .letter-spacing-1 {
+   letter-spacing: 4.75px;
+ }
+
+ .letter-spacing-2 {
+   letter-spacing: 2.7px;
+ }
+
+ .letter-spacing-3 {
+   letter-spacing: 2.35px;
+ }
+
+ .line-height-1 {
+   line-height: 2rem;
+ }
+
+ .uppercase {
+   text-transform: uppercase;
+ }
+
+ .fs-900 {
+   font-size: var(--fs-900);
+ }
+
+ .fs-800 {
+   font-size: var(--fs-800);
+ }
+
+ .fs-700 {
+   font-size: var(--fs-700);
+ }
+
+ .fs-600 {
+   font-size: var(--fs-600);
+ }
+
+ .fs-500 {
+   font-size: var(--fs-500);
+ }
+
+ .fs-400 {
+   font-size: var(--fs-400);
+ }
+
+ .fs-300 {
+   font-size: var(--fs-300);
+ }
+
+ .fs-200 {
+   font-size: var(--fs-200);
+ }
+
+ .fw-400 {
+   font-weight: 400;
+ }
+
+ .fw-900 {
+   font-weight: 900;
+ }
+
+ .fw-800 {
+   font-weight: 800;
+ }
+
+ .fw-700 {
+   font-weight: 700;
+ }
+
+ .fw-600 {
+   font-weight: 600;
+ }
+
+ .fw-500 {
+   font-weight: 500;
+ }
+
+ .fw-400 {
+   font-weight: 400;
+ }
+
+ .fw-300 {
+   font-weight: 300;
+ }
+
+ .fw-200 {
+   font-weight: 200;
+ }
+
+ .fs-900,
+ .fs-800,
+ .fs-700,
+ .fs-600 {
+   line-height: 1.1;
+ }
+
+ /* ------------------- */
+ /* Custom              */
+ /* ------------------- */
+ /* containers */
+ .container-fluid {
+   padding: 3% 15%;
+ }
+
+ /* anchor */
+ a {
+   color: hsl(var(--clr-prime));
+   transition-timing-function: ease-in;
+   transition-duration: .2s;
+ }
+
+ a:hover,
+ a:focus {
+   color: hsl(var(--clr-second));
+ }
+
+ /* navbar */
+ .navbar {
+   padding: 0 0 5rem 0;
+ }
+
+ .nav-item {
+   padding: 0 1rem 0 1rem;
+ }
+
+ /* title */
+ #title {
+   background-color: #3A0CA3;
+   overflow: hidden;
+   z-index: 0;
+ }
+
+ .img-title {
+   width: 30%;
+   max-width: 645px;
+   transform: rotate(15deg);
+   position: absolute;
+ }
+
+ @media (max-width: 1000px) {
+   .col-lg-6 {
+     flex: 0 0 auto;
+     width: 100%;
+   }
+
+   .img-title {
+     width: 60%;
+     transform: rotate(0);
+     position: relative;
+     margin: auto;
+   }
+
+   #title {
+     text-align: center;
+   }
+ }
+
+ /* download buttons */
+ .download-button {
+   margin: 0 15px 0 0;
+ }
+
+ /* features */
+ #features {
+   padding: 7% 15%;
+   background-color: #fff;
+   position: relative;
+ }
+
+ .features-color {
+   color: hsl(var(--clr-prime));
+   transition-timing-function: ease-in;
+   transition-duration: .2s;
+ }
+
+ .features-color:hover {
+   color: hsl(var(--clr-second));
+ }
+
+ /* screenshots */
+ #screenshots {
+   padding: 7% 0;
+   background-color: hsl(var(--clr-prime));
+   color: hsl(var(--clr-white));
+   text-align: center;
+ }
+
+ .screenshots-div {
+   padding: 0 15%
+ }
+
+ #press {
+   background-color: hsl(var(--clr-prime));
+   text-align: center;
+   padding: 0 0 7% 0;
+ }
+
+ #press img {
+   width: 15%;
+   margin: 1rem 1rem;
+   display: inline-block;
+ }
+
+ /* pricing */
+ #pricing {
+   padding: 7% 5%;
+ }
+
+ .btn-primary {
+   background-color: hsl(var(--clr-prime));
+   border-color: hsl(var(--clr-prime));
+ }
+
+ .btn-primary:hover,
+ .btn-primary:focus {
+   background-color: hsl(var(--clr-prime) / .8);
+   border-color: hsl(var(--clr-prime) / .8);
+ }
+
+ .btn-outline-primary {
+   border-color: hsl(var(--clr-prime));
+   color: hsl(var(--clr-prime));
+ }
+
+ .btn-outline-primary:hover,
+ .btn-outline-primary:focus {
+   border-color: hsl(var(--clr-prime));
+   background-color: hsl(var(--clr-prime));
+ }
+
+ /* cta  */
+ #cta {
+   padding: 7% 25%;
+   text-align: center;
+   background-color: hsl(var(--clr-prime));
+ }
+
+ /* footer */
+ #footer {
+   padding: 7% 25%;
+   text-align: center;
+ }
