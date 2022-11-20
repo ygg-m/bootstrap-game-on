@@ -9,7 +9,7 @@
 - Made using HTML and Bootstrap.
 
 # 🚀 Access
-The website is hosted by `GitHub Pages` at: ygg-m.github.io/bootstrap-game-on/
+The website is hosted by `GitHub Pages` at: https://ygg-m.github.io/bootstrap-game-on/
 
 # 🎯 Goals
 - [x] Design the base Project  
